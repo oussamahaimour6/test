@@ -23,8 +23,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          # Use your existing secrets for secure login
-		  client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_298C2E7162DF4DD2BA0D81B89F2ABACF}}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_298C2E7162DF4DD2BA0D81B89F2ABACF}}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0AED9C35CC274B55851F99992015E113}}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_50CCB4CA93024393B19A46A3118E5CA7}}
 
@@ -36,4 +35,5 @@ jobs:
           slot-name: 'Production'
           # 'package: .' tells the action to deploy everything from the root of your repo directly
           package: .
+
 
